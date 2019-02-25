@@ -1,6 +1,6 @@
 # MovieFlix
 
-This project was created by Israel Gpmes de Sena Júnior in order to audition for jop opening in Pluri Educacional.
+This project was created by Israel Gomes de Sena Júnior in order to audition for jop opening in Pluri Educacional.
 
 ## Development server
 
