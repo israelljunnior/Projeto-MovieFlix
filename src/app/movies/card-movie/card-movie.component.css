@@ -1,0 +1,139 @@
+.img {
+  display: block;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.0;
+  transition: .5s ease;
+  text-transform: uppercase;
+}
+
+.container:hover .overlay {
+  opacity: 1.0;
+}
+
+.container:hover .img {
+  opacity: 0.5;
+}
+
+.text a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17.5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: inline-block;
+    position: relative;
+    padding: 16px 16px 0px;
+    border-radius: 4px;
+    
+}
+
+
+.mat-card-header {
+  display: inline-block;
+
+}
+
+.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer) {
+  margin-bottom: 0;
+  width: 105%;
+}
+
+.card-movie {
+  width: 53%;
+  margin-bottom: 4%;
+  background-image: url("/assets/images/card/2560x1440-black-solid-color-background.jpg");
+  background-size: 110%;
+  background-position-x: -15px;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+
+
+.mat-card-title {
+  color:white;
+  font: 20px 'exo 4';
+  font-family: Tahoma, Geneva, sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+    /* display: flex; */
+}
+
+
+
+/*effect-box*/
+a.effect-box:after,
+a.effect-box:before {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/*effect-underline*/
+a.effect-underline:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: -10px;
+  text-decoration: none;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}

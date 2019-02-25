@@ -1,0 +1,13 @@
+<br /><br />
+<div class="container-spinner" *ngIf="loading">
+  <mat-progress-spinner class="example-margin"
+  [color]="color" [mode]="mode" [value]="value">
+  </mat-progress-spinner>
+</div>
+<div class="container" gdColumns="30% 75%" style="margin-left:2.5%;"
+ fxLayout="row" fxLayout.xs="column" fxLayoutWrap
+   fxLayoutGap="0.5%" fxLayoutAlign="left" *ngIf="movie">
+    <!--BEGINING CARD-->
+      <mf-card-movie-detail [movie]="movie"></mf-card-movie-detail>
+    <!--END CARD -->
+</div>

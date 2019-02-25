@@ -1,6 +1,6 @@
 # MovieFlix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+This project was created by Israel Gpmes de Sena Júnior in order to audition for jop opening in Pluri Educacional.
 
 ## Development server
 

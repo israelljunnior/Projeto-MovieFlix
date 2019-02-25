@@ -1,0 +1,29 @@
+
+<br />
+<p class="mat-display-3" style="margin-left:2.5%;color:white; text-align: center;">FILMES</p>
+
+<div class="container-spinner" *ngIf="loading">
+        <mat-progress-spinner class="example-margin"
+        [color]="color" [mode]="mode" [value]="value">
+        </mat-progress-spinner>
+</div>
+
+<div class="container"  gdColumns="21% 21% 21% 21%"
+ style="margin-left:2.5%;"
+  fxLayout="row" fxLayout.xs="column" fxLayoutWrap
+   fxLayoutGap="0.5%" fxLayoutAlign="center">
+   
+    <!--BEGINING CARD-->
+    <div class="container-card"  fxFlex="100%" gdColumns="150%"  *ngFor="let movie of movies | 
+    slice: lowValue : highValue">
+        <mf-card-movie [movie]="movie"></mf-card-movie>
+    </div>
+      <!--END CARD -->
+</div>
+
+<!--PAGINATOR-->
+<mat-paginator [length]="movies.length" [pageSize]="pageSize"  [showFirstLastButtons]="true"
+    (page)="pageEvent=getPaginatorData($event)" *ngIf="movies">
+</mat-paginator>
+<!--END PAGINATOR-->
+      
